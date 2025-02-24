@@ -19,7 +19,8 @@
     <option value="">-- Selecione --</option>
   </select>
   <button onclick="adicionarOrcamento()">Registrar</button>
-  <button onclick="resetarOrcamento()">Resetar Orçamento</button>
+  <button onclick="resetarOrcamento()" style="float: right;">Resetar Orçamento</button>
+
 
   <h3>Estruturas no Orçamento</h3>
   <table id="estruturasNoOrcamento">
@@ -66,16 +67,17 @@
 
     const unidadesDisponiveis = ["Unidade", "Kit", "Pacote", "Metro", "Caixa", "Pacote"];
     const detalhesEstruturas = {
-      "CE-1": {
+      "Baixa Tensão (BT) - U1": {
         valor: 0,
         itens: [
           { item: "Produto", codigo: "26211", descricao: "CABO COBRE ISOLADO XLPE 16 MM 34KV COR CINZA", quantidade: 10, valor: 22.85, unidade: "Metro" },
+          { item: "Produto", codigo: "10539", descricao: "Espasador Losangular", quantidade: 1, valor: 650, unidade: "Unidade" },
           { item: "Serviço", codigo: "10532", descricao: "INSTALAR ESTRUTURA PRIMÁRIA MRT(U1,U2)", quantidade: 1, valor: 650, unidade: "Unidade" },
           { item: "Serviço", codigo: "10561", descricao: "INSTALAR POSTE, NA REDE COM USO DE GUINDAUTO - ATE? 13 M,LINEAS DE COMP", quantidade: 1, valor: 1320, unidade: "Unidade" },
           { item: "Haste de Aterramento", codigo: "xxxxx", descricao: "Haste de Aterramento – Cobre 16mm x 2,4m", quantidade: 1, valor: 0, unidade: "Unidade" }
         ]
       },
-      "CE-3": {
+      "Média Tensão (MT): 13,8 KV - CE2": {
         valor: 0,
         itens: [
           { item: "Poste", codigo: "Nota 1", descricao: "Poste de Concreto 12m – Seção DT", quantidade: 1, valor: 1240.45, unidade: "Unidade" },
@@ -84,7 +86,7 @@
           { item: "Haste de Aterramento", codigo: "xxxxx", descricao: "Haste de Aterramento – Cobre 16mm x 2,4m", quantidade: 1, valor: 0, unidade: "Unidade" }
         ]
       },
-      "CE-4": {
+      "Alta Tensão (AT): 34,5 KV - ESTRUTURA TAL": {
         valor: 0,
         itens: [
           { item: "Insumo", codigo: "9486", descricao: "ANEL DE AMARRAÇÃO", quantidade: 1, valor: 5.87, unidade: "Unidade" },
